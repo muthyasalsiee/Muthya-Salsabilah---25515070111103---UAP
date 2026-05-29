@@ -61,13 +61,12 @@ public class GoDriveRentalSystem {
 
         double subtotal = biayaDasar + biayaTambahan;
 
-        // Diskon VIP 10%
         if (isVIP) {
             diskon += subtotal * 0.10;
             System.out.printf(Locale.US, "Diskon Member VIP (10%%): -Rp %,.0f%n", subtotal * 0.10);
         }
 
-        // Diskon lebih dari 7 hari: 5%
+       
         if (lamaSewa > 7) {
             double diskonDurasi = subtotal * 0.05;
             diskon += diskonDurasi;
